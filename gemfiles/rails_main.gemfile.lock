@@ -13,32 +13,6 @@ GIT
   revision: f98bb7ed41d513539cd6a1af1f21d96ae4f3cd17
   branch: main
   specs:
-    actioncable (7.2.0.alpha)
-      actionpack (= 7.2.0.alpha)
-      activesupport (= 7.2.0.alpha)
-      nio4r (~> 2.0)
-      websocket-driver (>= 0.6.1)
-      zeitwerk (~> 2.6)
-    actionmailbox (7.2.0.alpha)
-      actionpack (= 7.2.0.alpha)
-      activejob (= 7.2.0.alpha)
-      activerecord (= 7.2.0.alpha)
-      activestorage (= 7.2.0.alpha)
-      activesupport (= 7.2.0.alpha)
-      mail (>= 2.7.1)
-      net-imap
-      net-pop
-      net-smtp
-    actionmailer (7.2.0.alpha)
-      actionpack (= 7.2.0.alpha)
-      actionview (= 7.2.0.alpha)
-      activejob (= 7.2.0.alpha)
-      activesupport (= 7.2.0.alpha)
-      mail (~> 2.5, >= 2.5.4)
-      net-imap
-      net-pop
-      net-smtp
-      rails-dom-testing (~> 2.2)
     actionpack (7.2.0.alpha)
       actionview (= 7.2.0.alpha)
       activesupport (= 7.2.0.alpha)
@@ -49,13 +23,6 @@ GIT
       rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
-    actiontext (7.2.0.alpha)
-      actionpack (= 7.2.0.alpha)
-      activerecord (= 7.2.0.alpha)
-      activestorage (= 7.2.0.alpha)
-      activesupport (= 7.2.0.alpha)
-      globalid (>= 0.6.0)
-      nokogiri (>= 1.8.5)
     actionview (7.2.0.alpha)
       activesupport (= 7.2.0.alpha)
       builder (~> 3.1)
@@ -71,12 +38,6 @@ GIT
       activemodel (= 7.2.0.alpha)
       activesupport (= 7.2.0.alpha)
       timeout (>= 0.4.0)
-    activestorage (7.2.0.alpha)
-      actionpack (= 7.2.0.alpha)
-      activejob (= 7.2.0.alpha)
-      activerecord (= 7.2.0.alpha)
-      activesupport (= 7.2.0.alpha)
-      marcel (~> 1.0)
     activesupport (7.2.0.alpha)
       base64
       bigdecimal
@@ -86,20 +47,6 @@ GIT
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0, >= 2.0.5)
-    rails (7.2.0.alpha)
-      actioncable (= 7.2.0.alpha)
-      actionmailbox (= 7.2.0.alpha)
-      actionmailer (= 7.2.0.alpha)
-      actionpack (= 7.2.0.alpha)
-      actiontext (= 7.2.0.alpha)
-      actionview (= 7.2.0.alpha)
-      activejob (= 7.2.0.alpha)
-      activemodel (= 7.2.0.alpha)
-      activerecord (= 7.2.0.alpha)
-      activestorage (= 7.2.0.alpha)
-      activesupport (= 7.2.0.alpha)
-      bundler (>= 1.15.0)
-      railties (= 7.2.0.alpha)
     railties (7.2.0.alpha)
       actionpack (= 7.2.0.alpha)
       activesupport (= 7.2.0.alpha)
@@ -113,7 +60,9 @@ PATH
   remote: ..
   specs:
     solid_cache (0.2.0)
-      rails (>= 7)
+      activejob (>= 7)
+      activerecord (>= 7)
+      railties (>= 7)
 
 GEM
   remote: https://rubygems.org/
@@ -129,7 +78,6 @@ GEM
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     crass (1.0.6)
-    date (3.3.4)
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
@@ -149,27 +97,10 @@ GEM
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
-    mail (2.8.1)
-      mini_mime (>= 0.1.1)
-      net-imap
-      net-pop
-      net-smtp
-    marcel (1.0.2)
-    mini_mime (1.1.5)
     minitest (5.20.0)
     mocha (2.1.0)
       ruby2_keywords (>= 0.0.5)
     mysql2 (0.5.5)
-    net-imap (0.4.5)
-      date
-      net-protocol
-    net-pop (0.1.2)
-      net-protocol
-    net-protocol (0.2.2)
-      timeout
-    net-smtp (0.4.0)
-      net-protocol
-    nio4r (2.5.9)
     nokogiri (1.15.4-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.15.4-x86_64-darwin)
@@ -248,9 +179,6 @@ GEM
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.5.0)
     webrick (1.8.1)
-    websocket-driver (0.7.6)
-      websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.5)
     zeitwerk (2.6.12)
 
 PLATFORMS
@@ -266,7 +194,7 @@ DEPENDENCIES
   mocha
   mysql2
   pg
-  rails!
+  railties!
   rubocop-37signals!
   solid_cache!
   sprockets-rails

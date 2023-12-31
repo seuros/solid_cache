@@ -8,6 +8,6 @@ gem "pg"
 gem "sprockets-rails"
 gem "rubocop-37signals", require: false, git: "https://github.com/basecamp/house-style.git"
 gem "appraisal"
-gem "rails", branch: "main", git: "https://github.com/rails/rails.git"
+gem "railties", branch: "main", git: "https://github.com/rails/rails.git"
 
 gemspec path: "../"
